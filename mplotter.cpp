@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	if((argc < 2) || (string(argv[1]) == "-h"))
 	{
-		cerr<<"Usage: "<<argv[0]<<" out.new.fplot out.new.rplot ticks.new.txt"<<endl;
+		cerr<<"Usage: "<<argv[0]<<" out.new.fplot out.new.rplot mummerplot.out.new.gp"<<endl;
 		exit(EXIT_FAILURE);
 	}
 	ifstream finfor,finrev,fgp;
