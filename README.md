@@ -18,4 +18,8 @@ required:
 * mplotter (our version) and mummer2ggplot2.sh in the PATH and both executable
 * R and ggplot2 available
 
+example output
+
+![dotplot](pictures/plot.png)
+
 Please report any inconsistencies in the *Issues* page above
