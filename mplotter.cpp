@@ -16,14 +16,14 @@ int main(int argc, char *argv[])
 	ifstream finfor,finrev,fgp;
 	finfor.open(argv[1]);
 	finrev.open(argv[2]);
-	
+
 	ofstream fdot,fline,fxtics,fytics;
 	fdot.open("dot.txt");
-	fline.open("line.txt");	
+	fline.open("line.txt");
 	string line1,line2;
 	int lineCount =0;
 	size_t pos1,pos2; //pos1 stores position of first white space and pos2 records position of 2nd whitespace
-	
+
 
 	while((getline(finfor,line1) && getline(finfor,line2)))
 	{
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	lineCount = 0;//reset lineCount
-	while((getline(finrev,line1) && getline(finrev,line2)))	
+	while((getline(finrev,line1) && getline(finrev,line2)))
 	{
 		++lineCount;
 		if(lineCount % 2 ==0) //if the even number line
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 			fline<<line2.substr(0,pos1)<<'\t'<<line2.substr(pos1+1,pos2-pos1-1)<<'\t'<<'R'<<endl;
 			fdot<<line2.substr(0,pos1)<<'\t'<<line2.substr(pos1+1,pos2-pos1-1)<<'\t'<<'R'<<endl;
 		}
-	}	
+	}
 	finfor.close();
 	finrev.close();
 	fdot.close();
@@ -78,7 +78,10 @@ int main(int argc, char *argv[])
 		}
 		if(line2 != "YES")//if y tics hasn't been read yet
 		{
-			fxtics<<line1.substr(0,pos1)<<'\t'<<line1.substr(pos1+1)<<endl;
+			if(line1 != "set\txtics")
+			{
+				fxtics<<line1.substr(0,pos1)<<'\t'<<line1.substr(pos1+1)<<endl;
+			}
 		}
 	}
 	fgp.close();
@@ -86,4 +89,3 @@ int main(int argc, char *argv[])
 	fxtics.close();
 	return 0;
 }
-
