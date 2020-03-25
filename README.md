@@ -7,7 +7,7 @@ Creates publication quality dot plot from nucmer .delta output using ggplot2
 
 To run the script, move to the folder containing the nucmer .delta file and launch teh bash script
 
-mummer2ggplot2.sh nucmer.delta
+**mummer2ggplot2.sh nucmer.delta**
 
 required: 
 
