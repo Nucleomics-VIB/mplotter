@@ -1,7 +1,7 @@
 # mplotter
 Creates publication quality dot plot from nucmer .delta output using ggplot2
 
-* mplotter.cpp adapted from the original code
+* mplotter.cpp slightly adapted from the original code
   * Compile the .cpp file on your platform with: *c++ mplotter.cpp -o mplotter*
 * added bash script to run all original commands in one GO
 * added plotting in the bash script
