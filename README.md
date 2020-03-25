@@ -14,7 +14,7 @@ After running, the R script can be tuned to change aspect and legends and re-run
 
 required: 
 
-* mplotter (our version) and mummer2ggplot2.sh in the PATH an dboth executable
-* R and ggplot2 to plot
+* mplotter (our version) and mummer2ggplot2.sh in the PATH and both executable
+* R and ggplot2 available
 
-Please report any inconsistencies
+Please report any inconsistencies in teh Issues above
